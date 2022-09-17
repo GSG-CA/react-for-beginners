@@ -25,7 +25,18 @@ function Thing() {
 }
 ```
 
-since `Thing` would be returning _two_ elements. The solution to this is to wrap sibling elements in a parent `<div>` (or use a [Fragment](https://reactjs.org/docs/fragments.html)).
+since `Thing` would be returning _two_ elements. The solution to this is to wrap sibling elements in a parent `<div>` (or use a [Fragment](https://reactjs.org/docs/fragments.html)):
+
+```jsx
+function Thing() {
+  return (
+    <>
+      <span>Hello</span>
+      <span>Goodbye</span>
+    </>
+  )
+}
+```
 
 ## Composing components
 
